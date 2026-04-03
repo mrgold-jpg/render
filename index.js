@@ -1,0 +1,14 @@
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Hello World!</h1>
+    <footer>© 2025 Dylan Throckmorton</footer>
+  `);
+});
+
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
